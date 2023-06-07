@@ -1,7 +1,7 @@
 syntax = "proto3";
 package milvus.proto.milvus;
 
-option go_package = "github.com/milvus-io/milvus-proto/go-api/milvuspb";
+option go_package = "github.com/milvus-io/milvus-proto/go-api/v2/milvuspb";
 
 option java_multiple_files = true;
 option java_package = "io.milvus.grpc";
@@ -636,6 +636,7 @@ message IndexDescription {
   // index state
   common.IndexState state = 7;
   string index_state_fail_reason = 8;
+  int64 pending_index_rows = 9;
 }
 
 /*
